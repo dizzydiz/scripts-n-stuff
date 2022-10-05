@@ -1,15 +1,18 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/home/stas/go/bin
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/<user-name>/.oh-my-zsh"
+export ZSH="/home/stas/.oh-my-zsh"
+
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="random"
+ZSH_THEME="muse"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -69,7 +72,7 @@ ZSH_THEME="random"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-prompt zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git git-prompt zsh-autosuggestions zsh-syntax-highlighting asdf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -122,3 +125,8 @@ mkcd() { mkdir $1;cd $1; }
 # ; 2nd will run. && 2nd will not run
 gacm(){git add . && git commit -m $1}
 #alias sudo="sudo "
+github-init(){
+git remote add origin git@github.com:dizzydiz/$1
+git branch -M master
+git push -u origin master
+}
