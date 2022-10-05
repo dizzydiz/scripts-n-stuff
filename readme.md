@@ -1,3 +1,4 @@
-wtfutils
-cht.sh
-devdocs.io
+* wtfutils
+* cht.sh
+* devdocs.io
+* gh cli
