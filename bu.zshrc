@@ -130,3 +130,13 @@ git remote add origin git@github.com:dizzydiz/$1
 git branch -M master
 git push -u origin master
 }
+
+function pgup(){
+	docker run --name my-postgres-container -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d  postgres
+}
+
+function pgdown() {
+	docker stop my-postgres-container
+	docker rm my-postgres-container
+}
+
