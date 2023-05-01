@@ -140,3 +140,6 @@ function pgdown() {
 	docker rm my-postgres-container
 }
 
+gfeat() {
+	git checkout -b stas/$1
+}
