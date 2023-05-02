@@ -1,0 +1,150 @@
+package main
+import "fmt"
+func main() {
+var x int
+var str string
+fmt.Println()
+if err != nil {
+for i := 0; i < n; i++ {
+return x
+defer func() {
+_, err := fmt.Scanln(&input)
+type MyStruct struct {
+var slice []int
+func (m *MyStruct) MyMethod() {
+switch x {
+case 0:
+case 1:
+default:
+for _, v := range slice {
+x := myFunc()
+package
+import
+func
+var
+const
+type
+return
+defer
+go
+if
+else
+switch
+case
+default
+for
+range
+break
+continue
+goto
+fallthrough
+select
+chan
+type switch
+struct
+interface
+map
+slice
+make
+new
+append
+ch := make(chan Type)
+ch <- value
+value := <-ch
+close(ch)
+select {
+case value := <-ch:
+case ch <- value:
+default:
+for value := range ch {
+go func() { }()
+ch := make(chan Type, bufferSize)
+select { case <-ch: default: }
+ch1 := make(chan Type1)
+ch2 := make(chan Type2)
+go func() { ch <- value }()
+go func() { value := <-ch }()
+go func() { close(ch) }()
+go func() { for value := range ch { } }()
+select { case <-ch1: case <-ch2: }
+select { case ch1 <- value: case ch2 <- value: }
+var m map[KeyType]ValueType
+m := make(map[KeyType]ValueType)
+m[key] = value
+value := m[key]
+delete(m, key)
+len(m)
+for key := range m { }
+for key, value := range m { }
+_, exists := m[key]
+for key, value := range m { delete(m, key) }
+for key := range m { delete(m, key) }
+for key, value := range m { value = newValue }
+for key := range m { m[key] = newValue }
+m := map[KeyType]ValueType{key1: value1, key2: value2}
+if value, exists := m[key]; exists { }
+if _, exists := m[key]; exists { }
+for _, value := range m { }
+for key := range m { _ = key }
+for key := range m { _ = m[key] }
+for key := range m { delete(m, key); break }
+var s []Type
+s := make([]Type, length, capacity)
+s := []Type{value1, value2, value3}
+s = append(s, value)
+s = append(s, slice...)
+length := len(s)
+capacity := cap(s)
+value := s[index]
+s[index] = value
+s = append(s[:index], s[index+1:]...)
+s = append(s[:index], append([]Type{value}, s[index:]...)...)
+s = append(s[:index], append([]Type{value}, s[index:]...)...)
+s = append(s, make([]Type, n)...)
+copy(dest, src)
+copy(s[index:], s[index+1:])
+s = append(s[:index], s[index+1:]...)
+s = s[:index+copy(s[index:], s[index+1:])]
+for index, value := range s { }
+for _, value := range s { }
+for index := range s { }
+type MyStruct struct { }
+var instance MyStruct
+var instance MyStruct = MyStruct{}
+var instance *MyStruct = new(MyStruct)
+instance := MyStruct{}
+instance := &MyStruct{}
+instance := MyStruct{field1: value1, field2: value2}
+instance.field = value
+instance.method()
+instancePtr := &instance
+var instance MyStruct = MyStruct{field1: value1, field2: value2}
+type MyInterface interface { }
+func (m MyStruct) Method() { }
+func (m *MyStruct) Method() { }
+func NewMyStruct() *MyStruct { }
+func (m MyStruct) String() string { }
+func (m *MyStruct) String() string { }
+type MyEmbeddedStruct struct { MyStruct }
+type MyStruct struct { field1 Type1; field2 Type2 }
+instance := MyStruct{field1: value1, field2: value2}
+functionName()
+functionName(argument1, argument2)
+returnValue := functionName()
+returnValue := functionName(argument1, argument2)
+packageName.FunctionName()
+packageName.FunctionName(argument1, argument2)
+var variableName Type = functionName()
+variableName := functionName()
+variableName := functionName(argument1, argument2)
+_, err := functionName()
+returnValue, err := functionName()
+go functionName()
+go functionName(argument1, argument2)
+defer functionName()
+defer functionName(argument1, argument2)
+methodReceiver.functionName()
+methodReceiver.functionName(argument1, argument2)
+packageName.MethodName()
+packageName.MethodName(argument1, argument2)
+structInstance.MethodName()
